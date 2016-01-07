@@ -61,3 +61,35 @@ I think the most important commands and arguments to know are pwd, cd, ls, cp, f
 -help - this pulls up the different things/how to use a commands
 
 # 1.4 Forking and Cloning
+
+If you were going to write instructions for a new person on how to create a new repo, fork a repo, and clone a repo, what would they be? Why would you fork a repository as opposed to create a new one?
+One would fork an existing repository to have access to those files as opposed to creating a new one that is empty.
+
+My directions for a new person on how to create a new repository, fork it and clone it would be as follows:
+
+Step 1 Creating a New Repository - go to GitHub.com and login
+
+Step 1.1 - click on the "+" icon in the top right hand corner and select "new repository"
+
+Step 1.3 - insert the name of your new repository under the "Repository Name"
+
+Step 1.4 - set the repository to either private or public
+
+Step 2 Forking a Repository - go to GitHub.com and login
+
+Step 2.1 - click on the link to the repository you want to clone or find the repository on GitHub
+
+Step 2.2 - click on the "Fork" in the top right hand corner under the "+" icon
+
+Step 2.3 - select the where the repository will be forked to
+
+Step 3 Cloning a Repository - go to GitHub.com and login
+
+Step 3.1 - click on the repository that you want to clone
+
+Step 3.2 - next to "HTTPS" there is a url address; copy it
+
+Step 3.3 - open Terminal on your machine and type "git clone [insert the url provide on GitHub]"
+
+What struggles did you have setting up git and GitHub? What did you learn in the process?
+I didn't really have an struggles (except 1) in setting up git or GitHub as the process went exactly as described in the step-by-step setup instructions. The only issue I encountered was linking my GitHub to DevBootcamps account. In the process of setting up and working a little bit with the programs, I learned generally what git and GitHub do, how they are different, and some aspects of how to use them.
