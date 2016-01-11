@@ -1,6 +1,6 @@
 What is a wireframe?
 
-A sketch of how one wnats a website to look.
+A sketch of how one envisions/wants a website to look.
 
 What are the benefits of wireframing?
 
@@ -21,3 +21,5 @@ The resources provided were helpful. Also I plan on exploring the use of Sketch,
 Which parts of the challenge did you enjoy and which parts did you find tedious?
 
 Resizing and trying to make things proportional.
+
+<a href="/phase-0/week-2/imgs/wireframe-index.png">Link to wireframe</a>
