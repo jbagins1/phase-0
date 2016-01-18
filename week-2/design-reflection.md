@@ -25,3 +25,5 @@ User experience design is studying how users feel about a system, looking at suc
 Which parts of the challenge did you find tedious?
 
 None. It was interesting reading about the theory behind devloping websites on a professional level.
+
+<a href="/imgs/site-map.png">Sitemap</a>
