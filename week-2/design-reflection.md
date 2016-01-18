@@ -1,6 +1,6 @@
 What are the 6 Phases of Web Design?
 
-Informatio gathering, planning, deisn, development, testing and delivery, and maintenance.
+Information gathering, planning, design, development, testing and delivery, and maintenance.
 
 What is your site's primary goal or purpose? What kind of content will your site feature?
 
@@ -12,16 +12,16 @@ My target audience's interests probably include learning a bit about me and what
 
 What is the primary "action" the user should take when coming to your site? Do you want them to search for information, contact you, or see your portfolio? It's ok to have several actions at once, or different actions for different kinds of visitors.
 
-
+The primary action the user should take is perusing the website and checking out the stuff I've done over the course of my time at Dev Bootcamp.
 
 What are the main things someone should know about design and user experience?
 
-
+When designing, developers must consider the user experience, or UX, on its sites visitors. UX attempts to study and evaluate how user's feel about a system.
 
 What is user experience design and why is it valuable?
 
-
+User experience design is studying how users feel about a system, looking at such things as ease of use, perception of the value of the system, utility, efficiency in performing tasks and so forth. It is valuable because the driving factor of how we build websites today has become the experience we want to give the people who will use the websites.
 
 Which parts of the challenge did you find tedious?
 
-
+None. It was interesting reading about the theory behind devloping websites on a professional level.
