@@ -1,3 +1,57 @@
 html {
-  background-color: red;
+  background-color: #ffffff;
 }
+
+div {
+    display: block;
+    height: 1px;
+    border: .25;
+    border-top: 1px solid #ccc;
+    margin: 0em 0;
+    padding: 0;
+}
+
+p {
+  text-align: center;
+}
+
+body {
+  color: #000080;
+}
+
+a {
+  color: #800080;
+}
+
+a:visited {
+  color: #ff0000;
+}
+
+td {
+  height: 50px;
+  vertical-align: top;
+  width: 50%;
+}
+
+/*
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+The location of the external file in relation to the location of the file calling upon it.
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+It was allot of trial and error. Change an element and see what it does/where moves. It was pretty difficult figuring out how to line up the rows/columns.
+
+What CSS did you use to modify the element style (like size, color, etc.)?
+
+I used color to modify the color of the text, links, visited sites, and background of the page. I also modified display, height, border, border-top, margin, and padding in the div element to create a horizontal line. In addition, I used text-align to center align my paragraphs. Lastly, I used height, vertical-align, and width to create my table's columns/rows.
+
+Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+
+I did not use classes nor ids. Ids and classes allow one to specifically target a certain element by giving it a certain description.
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+Mine was pretty similar to theirs.  It doesn't look like they are used CSS, while I did. For example their <td> tags have a bunch of repeating code. I think I followed best practices per the above.
+
+*/
