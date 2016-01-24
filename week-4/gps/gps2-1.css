@@ -1,3 +1,36 @@
 * {
-  border: 1px solid red;
+  font-family: "lato", helvetica;
+}
+
+header {
+  padding: 2.5%;
+  background-color: #3384ff;
+  color: white;
+}
+
+summary {
+  background-color: #d3d3d3;
+  padding: 0.75%;
+}
+
+.column-1,
+.column-2 {
+  float: left;
+  padding: 2.5%;
+  width: 45%;
+}
+
+li {
+  padding-bottom: 2%;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 2.5%;
+  background-color: #b3d1ff;
 }
