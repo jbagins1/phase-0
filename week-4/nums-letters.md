@@ -27,24 +27,32 @@ def minutes
 end
 ```
 
-Link to 4.2.1:
-Link to 4.2.2:
-Link to 4.2.3:
+Link to 4.2.1: https://github.com/jbagins1/phase-0/blob/master/week-4/defining-variables.rb
+
+Link to 4.2.2: https://github.com/jbagins1/phase-0/blob/master/week-4/simple-string.rb
+
+Link to 4.2.3: https://github.com/jbagins1/phase-0/blob/master/week-4/basic-math.rb
 
 How does Ruby handle addition, subtraction, multiplication, and division of numbers?
 
-
+If not otherwise indicated, Ruby will multiply and divide first, then add or substract numbers.
 
 What is the difference between integers and floats?
 
+An integer is a whole number without any remainder. A float is is an inexact number.
 
 What is the difference between integer and float division?
 
+If integer division results in a remainder, it will only display the whole number not the remainder. Float division will display the exact number.
 
 What are strings? Why and when would you use them?
 
+Strings are collections of textual characters. Strings are used when you want display text (i.e. words).
 
 What are local variables? Why and when would you use them?
 
+Local variables can only be used in a certain part of a function. They are limited in scope. For example you can use them anywhere where you need a generic variable.
 
 How was this challenge? Did you get a good review of some of the basics?
+
+Yes it was a good review of the basics.
