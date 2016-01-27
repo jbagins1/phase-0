@@ -35,3 +35,4 @@ What was confusing about this material? What made sense?
 
 This was pretty straight forward and a review of some of the first few Code Academy lesson. I did, however, learn how to run the rb file from the terminal and how to rspec.
 
+Link to do_something method: https://github.com/jbagins1/phase-0/blob/master/week-4/define-method/my_solution.rb
