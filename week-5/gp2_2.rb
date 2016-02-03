@@ -60,3 +60,31 @@ end
 def print_list(list)
   list.each { |object, amount| puts "#{object} = #{amount}" }
 end
+
+list = " "
+grocery_list = create_list(list)
+add_item("lemonade", 2, grocery_list)
+add_item("tomatoes", 3, grocery_list)
+add_item("onions", 1, grocery_list)
+add_item("ice cream", 4, grocery_list)
+puts "Create list"
+print_list(grocery_list)
+puts "Remove Lemonade"
+remove_item("lemonade", grocery_list)
+print_list(grocery_list)
+puts "Update ice cream quantity to 1"
+update_item("ice cream", 1, grocery_list)
+print_list(grocery_list)
+
+# What did you learn about pseudocode from working on this challenge?
+# It was challenging attempting to translate in plain english what we'd like the code to do and then getting it to that point.
+# What are the tradeoffs of using Arrays and Hashes for this challenge?
+# I'm not really sure how you could use an array for this challenge without it getting very complicated. Since we essentially have an item and quantity it made more sense to break them up into key-value pairs.
+# What does a method return?
+# It returns whatever is located after the return syntax.
+# What kind of things can you pass into methods as arguments?
+# Any object that a method can accept.
+# How can you pass information between methods?
+# You can pass information between methods by passing the method andd its arguments to another method.
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+# This challenge was very difficult and I did not understand how to do. Namely, working with multiple variables and arguments was difficult to conceptualize.
