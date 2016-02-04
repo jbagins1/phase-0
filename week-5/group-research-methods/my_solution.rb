@@ -68,10 +68,11 @@ end
 # Person 5
 
 # Identify and describe the Ruby method(s) you implemented.
+# is_a?(Integer) and is_a?(String) which test whether the given argument is either an integer or string respectively
 
 # Pseudocode
 # seperate the integers from the strings
-# put the integers into an array and put the strings into an array
+# put the integers into an array and put the strings into a separate an array
 
 def my_array_splitting_method(array)
   array1 = []
@@ -86,12 +87,10 @@ def my_array_splitting_method(array)
       array2 << x
     end
   end
-  return array3
+  array3
 end
 
 my_array_splitting_method(i_want_pets)
-
-my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
 def my_hash_splitting_method(hash)
   array1 = []
@@ -104,21 +103,27 @@ def my_hash_splitting_method(hash)
       array2 << [k, v]
     end
   end
-  return array3
+  array3
 end
 
 my_hash_splitting_method(my_family_pets_ages)
 
 # Release 1: Identify and describe the Ruby method you implemented. Teach your
 # accountability group how to use the methods.
-#
-#
-#
-
+# my_array_splitting_method will split up an array and separate out the integers and the strings into nested arrays. my_hash_splitting_method will split up a hash and return an array of nested arrays where 1 array will contain the key-value pairs if the value is less than 4, meanwhile the other array will contain all of key-value pairs.
 
 # Release 3: Reflect!
 # What did you learn about researching and explaining your research to others?
 #
+# What was your experience like researching for Ruby methods. Did you find them quickly? How easy was it to implement once you found one?
 #
-#
-#
+# Did you find any methods you thought would work but didn't? What made you think they would work? How did you determine they didn't?
+# It was challenging finding the right method, namely I wasn't sure where to look, but I knew generally what I was looking for.
+# How does the method you chose iterate through and modify information in a data structure?
+# It asks the objects it iterates through whether they are integers or strings.
+# Is the method you implemented destructive or non-destructive?
+# Non-destructive.
+# What did you learn from reading your accountability-group member's explanations on their solutions?
+# I learned about the methods they used to accomplish their assignments.
+# What did you learn about researching and explaining your research to others?
+# I learned that it is sometimes difficult to explain the concepts in plain english and make them seem like they make sense.  It makes sense to me, but may not make sense to others.
