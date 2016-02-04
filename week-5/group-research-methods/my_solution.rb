@@ -3,6 +3,7 @@
 # I spent too many hours on this challenge.
 
 i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
+
 my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
 # Person 1's solution
@@ -72,8 +73,6 @@ end
 # seperate the integers from the strings
 # put the integers into an array and put the strings into an array
 
-i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
-
 def my_array_splitting_method(array)
   array1 = []
   array2 = []
@@ -92,11 +91,23 @@ end
 
 my_array_splitting_method(i_want_pets)
 
-my_array_splitting_method(i_want_pets)
+my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
-def my_hash_splitting_method(my_family_pets_ages, 4)
-
+def my_hash_splitting_method(hash)
+  array1 = []
+  array2 = []
+  array3 = [array1, array2]
+  hash.each do |k, v| v
+    if v <= 4
+      array1 << [k, v]
+    elsif v > 4
+      array2 << [k, v]
+    end
+  end
+  return array3
 end
+
+my_hash_splitting_method(my_family_pets_ages)
 
 # Release 1: Identify and describe the Ruby method you implemented. Teach your
 # accountability group how to use the methods.

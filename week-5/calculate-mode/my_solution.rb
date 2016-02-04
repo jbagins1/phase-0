@@ -1,65 +1,113 @@
-# Calculate the mode Pairing Challenge
+# Research Methods
 
-# I worked on this challenge with: Ben Giamarino.
+# I spent too many hours on this challenge.
 
-# I spent 2 hours on this challenge.
+i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
+my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
-# Complete each step below according to the challenge directions and
-# include it in this file. Also make sure everything that isn't code
-# is commented.
-
-# 0. Pseudocode
-
-# What is the input?
-# An array of numbers or strings.
-# What is the output? (i.e. What should the code return?) An array of the most frequently occuring objects from the first array.
-# What are the steps needed to solve the problem?
-# Set up new hash.
-# Go through the array and iterate through the array and assign each object to the new hash with the number of times that item appears.
-# Check the new list for which item(s) appear the most.
-# Put the items in their own list.
-# Send back the list.
-
-
-# 1. Initial Solution
-
-def mode(list)
-  mode_list = Hash.new
-  list.each do |x|
-    if mode_list.has_key?(x)
-      mode_list[x] += 1
-    else
-      mode_list[x] = 1
-    end
-  end
-  mode_num = 0
-  mode_list.each {|k, v| mode_num = v if mode_num < v}
-  mode_array = []
-  mode_list.each {|k, v| mode_array << k if mode_num == v}
-  return mode_array
+# Person 1's solution
+def my_array_finding_method(source, thing_to_find)
+  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
 end
 
-# arr = [1, 2, 3, 3]
-# mode_arr = mode(arr)
-# mode_arr.each {|x| puts x}
+def my_hash_finding_method(source, thing_to_find)
+  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+end
 
-mode([1,2,3,3])
-mode([4.5, 0, 0])
-mode([1.5, -1, 1, 1.5])
-mode([1,1,2,2])
-mode([1,2,3])
-mode(["who", "what", "where", "who"])
+# Identify and describe the Ruby method(s) you implemented.
+#
+#
+#
 
-# 3. Refactored Solution
+# Person 2
+def my_array_modification_method!(source, thing_to_modify)
+  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+end
 
-I couldn't figure out how to refactor this anymore.
+def my_hash_modification_method!(source, thing_to_modify)
+  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+end
 
-# 4. Reflection
-# Which data structure did you and your pair decide to implement and why?
-# We used a hash because then we could separate the keys according to their value.
-# Were you more successful breaking this problem down into implementable pseudocode than the last with a pair?
-# Yes.
-# What issues/successes did you run into when translating your pseudocode to code?
-# Figuring out how to separate the keys from their values.
-# What methods did you use to iterate through the content? Did you find any good ones when you were refactoring? Were they difficult to implement?
-# .each. I searched the Ruby docs for a while and couldn't find anything that looked it it applied to this situation.
+# Identify and describe the Ruby method(s) you implemented.
+#
+#
+#
+
+
+# Person 3
+def my_array_sorting_method(source)
+  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+end
+
+def my_hash_sorting_method(source)
+   source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+end
+
+# Identify and describe the Ruby method(s) you implemented.
+#
+#
+#
+
+
+# Person 4
+def my_array_deletion_method!(source, thing_to_delete)
+  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+end
+
+def my_hash_deletion_method!(source, thing_to_delete)
+  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+end
+
+# Identify and describe the Ruby method(s) you implemented.
+#
+#
+#
+
+
+# Person 5
+
+# Identify and describe the Ruby method(s) you implemented.
+
+# Pseudocode
+# seperate the integers from the strings
+# put the integers into an array and put the strings into an array
+
+i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
+
+def my_array_splitting_method(array)
+  array1 = []
+  array2 = []
+  array3 = []
+  array3 << array1
+  array3 << array2
+  array.each do |x|
+    if x.is_a?(Integer)
+      array1 << x
+    elsif x.is_a?(String)
+      array2 << x
+    end
+  end
+  return array3
+end
+
+my_array_splitting_method(i_want_pets)
+
+my_array_splitting_method(i_want_pets)
+
+def my_hash_splitting_method(my_family_pets_ages, 4)
+
+end
+
+# Release 1: Identify and describe the Ruby method you implemented. Teach your
+# accountability group how to use the methods.
+#
+#
+#
+
+
+# Release 3: Reflect!
+# What did you learn about researching and explaining your research to others?
+#
+#
+#
+#
