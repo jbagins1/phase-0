@@ -64,6 +64,7 @@ end
 #=>The method I used was the delete_if method. It will delete an element
 #=>from the array/hash if some condition is met. In this case I deleted if
 #=>an element had a substring of thing_to_delete.
+#
 # Release 3: Reflect!
 # What did you learn about researching and explaining your research to others?
 #=>My biggest difficulty was doing destructive methods. I could get the correct
