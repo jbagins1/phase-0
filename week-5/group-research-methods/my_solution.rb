@@ -168,6 +168,9 @@ my_hash_splitting_method(my_family_pets_ages)
 # Release 1: Identify and describe the Ruby method you implemented. Teach your
 # accountability group how to use the methods.
 # Identify and describe the Ruby method(s) you implemented.
-# my_array_splitting_method will separate an array into 2 nested arrays within the original array (partition) of strings and integers. It accomplishes this by using the .partition method on the input array. Partition splits the array into 2 nested arrays within the original array based on whether a provided code block return true. In this case the code block is: .is_a?(Integer), which iterates through element of the array and asks are you an integer? If yes, go into this array, if no go into the other one.
-# Similarly, my_hash_splitting_method will separate the hash, turn it into an array, and separate it into two nested arrays (again by using partition and iterating through the values) based on whether the value, in this case: pet's age, is greater than 4.
-# I found these solutions through reading the Well Grounded Rubyist.
+# my_array_splitting_method will separate an array into 2 nested arrays within the original array (partition) of strings and integers.  # It accomplishes this by using the .partition method on the input array. Partition splits the array into 2 nested arrays within the original
+# array based on whether a provided code block return true. In this case the code block is: .is_a?(Integer), which iterates through element of the
+# array and asks are you an integer? If yes, go into this array, if no go into the other one.
+# Similarly, my_hash_splitting_method will separate the hash, turn it into an array, and separate it into two nested arrays (again by using
+# partition and iterating through the values) based on whether the value, in this case: pet's age, is greater than 4.
+# I found these solutions through reading the Well Grounded Rubyist Chapter 10.3.4.
