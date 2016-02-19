@@ -119,20 +119,14 @@ end
 
 # Person 5
 
-# Identify and describe the Ruby method(s) you implemented.
-# is_a?(Integer) - tests whether the given argument is an integer
-# partition -
-
 # Pseudocode
 # Need method that separates ojects into 2 separate nested arrays based on true/false test for integer or string
 # Group integers in one array and group strings in another array
 
-#Refactored
 def my_array_splitting_method(array)
-  array.partition { |x| x.is_a?(Integer) }
+  array.partition { |word_or_number| word_or_number.is_a?(Integer) }
 end
 
-#Non-Refactored - if anyone reads this, does the below qualify as "altering the original data structure"?
 def my_array_splitting_method(array)
   array1 = []
   array2 = []
@@ -151,12 +145,10 @@ end
 
 my_array_splitting_method(i_want_pets)
 
-#Refactored
 def my_hash_splitting_method(hash)
   hash.partition { |pet, age| age > 5  }
 end
 
-#Non-Refactored - if anyone reads this, does the below qualify as "altering the original data structure"?
 def my_hash_splitting_method(hash)
   array1 = []
   array2 = []
@@ -175,4 +167,7 @@ my_hash_splitting_method(my_family_pets_ages)
 
 # Release 1: Identify and describe the Ruby method you implemented. Teach your
 # accountability group how to use the methods.
-# my_array_splitting_method will split up an array and separate out the integers and the strings into nested arrays. It accomplishes this by my_hash_splitting_method will split up a hash and return an array of nested arrays where 1 array will contain the key-value pairs if the value is less than 4, meanwhile the other array will contain all of key-value pairs.
+# Identify and describe the Ruby method(s) you implemented.
+# my_array_splitting_method will separate an array into 2 nested arrays within the original array (partition) of strings and integers. It accomplishes this by using the .partition method on the input array. Partition splits the array into 2 nested arrays within the original array based on whether a provided code block return true. In this case the code block is: .is_a?(Integer), which iterates through element of the array and asks are you an integer? If yes, go into this array, if no go into the other one.
+# Similarly, my_hash_splitting_method will separate the hash, turn it into an array, and separate it into two nested arrays (again by using partition and iterating through the values) based on whether the value, in this case: pet's age, is greater than 4.
+# I found these solutions through reading the Well Grounded Rubyist.
