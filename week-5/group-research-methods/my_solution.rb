@@ -1,88 +1,138 @@
 # Research Methods
 
-# I spent too many hours on this challenge.
+# I spent a few hours on this challenge.
 
 i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
 
 my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
 # Person 1's solution
+
+# Create a method my_array_finding_method that takes an Array and a letter as arguments and returns a new array of the words that contain that letter.
+
+#PSEUDOCODE
+
+#1 a new method taking two arguments - the array of words and the letter we're searching for.
+#2 using .map we can convert the entire array into strings (getting rid of those pesky integers).
+#3 using .select method to iterate and search.
+
+# Andrew Crowley's solution
+
 def my_array_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+make_string = source.map { |e| e.to_s }
+make_string.select { |e| e.include?(thing_to_find) }
 end
+
+# Create a method my_hash_finding_method that takes a Hash and number as arguments and returns a new array of pet names by age.
+
+#PSEUDOCODE
+
+#1 two arguments again - hash of pet names and the age we're searching for.
+#2 create a new hash using .select. This method will iterate through each item in the hash and pick out what we're searching for.
+#3 we are searching for age so the value we want == thing_to_find
+#4 since the keys = pet names in this hash, and that's what we want to show, .keys works perfectly.
+
 
 def my_hash_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+solution = source.select { |key, value| value == thing_to_find }
+solution.keys
 end
 
 # Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
+
+# .map - used to convert array elements into strings. This method iterates through an array and returns a new array where each element has been modified as per my instructions.
+# .select - Iterates through an array and returns a new array based on your argument.
+# .include? - Searches a string for your argument and returns true or false.
+# .keys - This one returns a new array populated with the keys from this hash.
 
 # Person 2
-def my_array_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+
+# Pseudocode
+# Input: Existing array, how many pets you want to add
+# Output: Permanently modified new array with modified numbers, adding the amount of pets
+
+def my_array_modification_method!(source, add_pets)
+  source.map!{ |i| i.is_a?(Integer) ? i + add_pets : i}
 end
 
-def my_hash_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+def my_hash_modification_method!(source, add_age)
+  source.each {|k, v| source[k] = v + add_age}
 end
 
 # Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
-
+# I implemented .map! for modifying an array destructively and .is_a?(Integer) ? to check for and modify integers only.
+# I implemented .each to target each key of the hash, and saved them destructively via saving directly to the new value of the key.
 
 # Person 3
 def my_array_sorting_method(source)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  p source.sort_by{|x| x.to_s}
 end
 
+my_array_sorting_method(i_want_pets)
+
+
 def my_hash_sorting_method(source)
-   source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  p source.sort_by{|key,value| [value, key]}
 end
+
+my_hash_sorting_method(my_family_pets_ages)
+
+# Identify and describe the Ruby method(s) you implemented.
+# sort_by: is a method that sorts a collection of items against a block and returns an array of the sorted items. This method was useful because I was not able to use the sort method on elements in array that contains but strings and integers.
+
+# to_s: is a method that creates a string representation of the object that calls it. This method was useful in this situation because there were both strings and integers within the array. I was not able to use the sort method on its own because it wouldn't have been able to work with both strings and integers.  The solution was to use the method sort_by and convert each element in the array to a representation of a string.
+
+#Reading the ruby docs is still a bit difficult to grasp so many times I try to replicate the examples and change different mechanics of the code to see what it does. I also try to use ctrl + F to go to the keyword that makes most sense to search through the document.
+
+# Person 4
+# Pseudocode
+# Take an existing list, and letter or word.
+# Search through the list to see if any element contains the inputted letter or word and save it in another list.
+# Take the saved list and delete each element matching on both lists.
+
+def my_array_deletion_method!(source, thing_to_delete)
+  words_to_delete = source.find_all { |f| f.to_s.include?(thing_to_delete)}
+  words_to_delete.each do |word|
+    source.delete(word)
+  end
+  p source
+end
+
+# Pseudocode
+# Take an existing list, and word.
+# Find the word inside the list and delete it.
+
+def my_hash_deletion_method!(source, thing_to_delete)
+  source.delete(thing_to_delete)
+  p source
+end
+
+
 
 # Identify and describe the Ruby method(s) you implemented.
 #
-#
-#
-
-
-# Person 4
-def my_array_deletion_method!(source, thing_to_delete)
-  source.delete_if { |item| item.to_s.include? thing_to_delete}
-end
-
-def my_hash_deletion_method!(source, thing_to_delete)
-  source.delete_if { |k, v| k.to_s.include? thing_to_delete}
-end
-
-# Release 1: Identify and describe the Ruby method you implemented. Teach your
-# accountability group how to use the methods.
-#=>The method I used was the delete_if method. It will delete an element
-#=>from the array/hash if some condition is met. In this case I deleted if
-#=>an element had a substring of thing_to_delete.
-#
-# Release 3: Reflect!
-# What did you learn about researching and explaining your research to others?
-#=>My biggest difficulty was doing destructive methods. I could get the correct
-#=>answer, but it would not be the same object_id which forced me to abandon
-#=>my initial solution.
-#
-
-
+# Enumerable#find_all allows you to pass a block of code specifing every element in the array that matches that block. In my code I used it to find every element that included the thing wanted to be deleted.
+# String#include? accepts an argument and returns a true or false if it is found inside that string.
+# Enumerable#delete accepts an argument and if found in an array, deletes the element in that array, and if it's a hash deletes the key along with its paired value.
+# These methods are great for using with each other. The Include method for example can initiate an if statement since it returns either true or false. In my case I used it to pass any elements that tested true into a separate array by calling the find_all method. Finally, delete is great for destructively altering an array or hash by removing an element or key.
+# One way I found to make it easier to read the Ruby docs, is to read the side bar and quickly scan for any potential methods that sound somewhat to what I want to achieve, I then also quickly read over the description. If the examples shown are similar to the results I want achieved, I then use IRB to experiment until I can get it to do what I want it to do. If that method fails to produce what I want, or is too convoluted, I just move on another method. I also noticed the Ruby docs have a very specific pervasive vocabulary, such as initial, sym, obj, these point to what it requires and what is produced. For example obj is an object, initial, is an optional initial value some methods take, etc.
 
 # Person 5
 
 # Identify and describe the Ruby method(s) you implemented.
-# is_a?(Integer) and is_a?(String) which test whether the given argument is either an integer or string respectively
+# is_a?(Integer) - tests whether the given argument is an integer
+# partition -
 
 # Pseudocode
-# seperate the integers from the strings
-# put the integers into an array and put the strings into a separate an array
+# Need method that separates ojects into 2 separate nested arrays based on true/false test for integer or string
+# Group integers in one array and group strings in another array
 
+#Refactored
+def my_array_splitting_method(array)
+  array.partition { |x| x.is_a?(Integer) }
+end
+
+#Non-Refactored - if anyone reads this, does the below qualify as "altering the original data structure"?
 def my_array_splitting_method(array)
   array1 = []
   array2 = []
@@ -101,6 +151,12 @@ end
 
 my_array_splitting_method(i_want_pets)
 
+#Refactored
+def my_hash_splitting_method(hash)
+  hash.partition { |pet, age| age > 5  }
+end
+
+#Non-Refactored - if anyone reads this, does the below qualify as "altering the original data structure"?
 def my_hash_splitting_method(hash)
   array1 = []
   array2 = []
@@ -119,20 +175,4 @@ my_hash_splitting_method(my_family_pets_ages)
 
 # Release 1: Identify and describe the Ruby method you implemented. Teach your
 # accountability group how to use the methods.
-# my_array_splitting_method will split up an array and separate out the integers and the strings into nested arrays. my_hash_splitting_method will split up a hash and return an array of nested arrays where 1 array will contain the key-value pairs if the value is less than 4, meanwhile the other array will contain all of key-value pairs.
-
-# Release 3: Reflect!
-# What did you learn about researching and explaining your research to others?
-#
-# What was your experience like researching for Ruby methods. Did you find them quickly? How easy was it to implement once you found one?
-#
-# Did you find any methods you thought would work but didn't? What made you think they would work? How did you determine they didn't?
-# It was challenging finding the right method, namely I wasn't sure where to look, but I knew generally what I was looking for.
-# How does the method you chose iterate through and modify information in a data structure?
-# It asks the objects it iterates through whether they are integers or strings.
-# Is the method you implemented destructive or non-destructive?
-# Non-destructive.
-# What did you learn from reading your accountability-group member's explanations on their solutions?
-# I learned about the methods they used to accomplish their assignments.
-# What did you learn about researching and explaining your research to others?
-# I learned that it is sometimes difficult to explain the concepts in plain english and make them seem like they make sense.  It makes sense to me, but may not make sense to others.
+# my_array_splitting_method will split up an array and separate out the integers and the strings into nested arrays. It accomplishes this by my_hash_splitting_method will split up a hash and return an array of nested arrays where 1 array will contain the key-value pairs if the value is less than 4, meanwhile the other array will contain all of key-value pairs.
