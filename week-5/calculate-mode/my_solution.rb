@@ -1,113 +1,47 @@
-# Research Methods
+# Calculate the mode Pairing Challenge
 
-# I spent too many hours on this challenge.
+# I worked on this challenge with: Joshua Lugo
+# I spent [] hour on this challenge.
 
-i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
-my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
+# Complete each step below according to the challenge directions and
+# include it in this file. Also make sure everything that isn't code
+# is commented.
 
-# Person 1's solution
-def my_array_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+
+
+# 0. Pseudocode
+
+# Write a method mode which takes an Array of numbers or strings as its input and returns an Array of the most frequent values.
+
+# If there's only one most-frequent value, it returns a single-element Array.
+
+# 0. Pseudocode
+
+# What is the input? An array
+# What is the output? An array of the most frequently occuring object
+# What are the steps needed to solve the problem?
+# Step 1 - set up a method that takes 1 argument, the array
+# Step 2 - set up a hash to hold the objects from the array
+# Step 3 - iterate through the array and assign each object to a key with an initial value of 1 and add 1 to the value each time the key is overriden
+# Step 4 - figure out a way to separate out key(s) with the highest value
+
+# 1. Initial Solution
+
+def mode(array)
+  hash = Hash.new(0)
+  array.each { |key| hash[key] += 1 }
+  hash = hash.select { |key, value| value == hash.values.max }
+  return hash.keys
 end
 
-def my_hash_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
-end
+# 2. Refactored Solution
+# We couldn't find any further way to refactor this down.
 
-# Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
-
-# Person 2
-def my_array_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
-end
-
-def my_hash_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
-end
-
-# Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
-
-
-# Person 3
-def my_array_sorting_method(source)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
-end
-
-def my_hash_sorting_method(source)
-   source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
-end
-
-# Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
-
-
-# Person 4
-def my_array_deletion_method!(source, thing_to_delete)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
-end
-
-def my_hash_deletion_method!(source, thing_to_delete)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
-end
-
-# Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
-
-
-# Person 5
-
-# Identify and describe the Ruby method(s) you implemented.
-
-# Pseudocode
-# seperate the integers from the strings
-# put the integers into an array and put the strings into an array
-
-i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
-
-def my_array_splitting_method(array)
-  array1 = []
-  array2 = []
-  array3 = []
-  array3 << array1
-  array3 << array2
-  array.each do |x|
-    if x.is_a?(Integer)
-      array1 << x
-    elsif x.is_a?(String)
-      array2 << x
-    end
-  end
-  return array3
-end
-
-my_array_splitting_method(i_want_pets)
-
-my_array_splitting_method(i_want_pets)
-
-def my_hash_splitting_method(my_family_pets_ages, 4)
-
-end
-
-# Release 1: Identify and describe the Ruby method you implemented. Teach your
-# accountability group how to use the methods.
-#
-#
-#
-
-
-# Release 3: Reflect!
-# What did you learn about researching and explaining your research to others?
-#
-#
-#
-#
+# 3. Reflection
+# Which data structure did you and your pair decide to implement and why?
+# Were you more successful breaking this problem down into implementable pseudocode than the last with a pair?
+# Not as much as with the last pair. This one was more difficult conceptually.
+# What issues/successes did you run into when translating your pseudocode to code?
+# It was difficult figuring out a way to separate the keys with the highest values into an array.
+# What methods did you use to iterate through the content? Did you find any good ones when you were refactoring? Were they difficult to implement?
+# We used .each and .select. We couldn't find any other ones that seemed to work better or were more refactored.
